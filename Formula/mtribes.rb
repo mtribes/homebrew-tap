@@ -6,11 +6,11 @@ class Mtribes < Formula
   bottle :unneeded
 
   if OS.mac?
-    url "https://mtribes-cli.s3-us-west-2.amazonaws.com/release/v0.0.1/mtribes_0.0.1_Darwin_x86_64.tar.gz"
-    sha256 "006bff7b0650b2ff4adbedade42371dd2a88c9aae5d8d094564582436ea5c36d"
+    url "https://github.com/mtribes/mtcli/releases/download/v0.0.1/mtribes_Darwin_x86_64.tar.gz"
+    sha256 "450a15a127d1e5dff46e860a86b3f69a6867a3db9daacd6f86f3db2b32b97fe7"
   elsif OS.linux?
-    url "https://mtribes-cli.s3-us-west-2.amazonaws.com/release/v0.0.1/mtribes_0.0.1_Linux_x86_64.tar.gz"
-    sha256 "be165b79c0e5f02032ec369b17505b47a4bf2b4aa980978f206cb248d1bc3c7f"
+    url "https://github.com/mtribes/mtcli/releases/download/v0.0.1/mtribes_Linux_x86_64.tar.gz"
+    sha256 "476488a16a3a6ea4ee9c18054f0ec09671e4d0353e051eb87864c173b255004e"
   end
 
   def install
