@@ -7,10 +7,10 @@ class Mtribes < Formula
 
   if OS.mac?
     url "https://mtribes-cli.s3-us-west-2.amazonaws.com/release/v0.0.1/mtribes_0.0.1_Darwin_x86_64.tar.gz"
-    sha256 "5f10b6ee9fa0cb0dc12cc8b104f1a105fca2bfbda08020556064e9527e65bd49"
+    sha256 "a2a43222bf96b16158c317fc6d01b3203cc87dcdb5deed0483ca1ea67068a0db"
   elsif OS.linux?
     url "https://mtribes-cli.s3-us-west-2.amazonaws.com/release/v0.0.1/mtribes_0.0.1_Linux_x86_64.tar.gz"
-    sha256 "9000147ddb4d6f025abe31840941f90daf5b06d2fe0af98564f2053872575b96"
+    sha256 "0c542d535cbda094fdc51a46050c614ea6c16208191269a91cc8a2f95b4fe18b"
   end
 
   def install
