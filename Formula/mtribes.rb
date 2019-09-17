@@ -2,24 +2,24 @@
 class Mtribes < Formula
   desc "A CLI to help automate app integration with mtribes."
   homepage "https://mtribes.com"
-  version "0.6.0"
+  version "0.7.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/mtribes/mtcli/releases/download/v0.6.0/mtribes_Darwin_x86_64.tar.gz"
-    sha256 "1f81fe16526822032d2d2179b19bdb247537e669f504026c91db2ff059bfdb0e"
+    url "https://github.com/mtribes/mtcli/releases/download/v0.7.0/mtribes_Darwin_x86_64.tar.gz"
+    sha256 "faa4f780af52422ea87f2ea064317255ccd27875b5e8f7370b754c6d17d6d7b0"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/mtribes/mtcli/releases/download/v0.6.0/mtribes_Linux_x86_64.tar.gz"
-      sha256 "28d8762b239ea7bda01b12891b93a865c95a3c2b3ed387ac13e2e3cc56c89f53"
+      url "https://github.com/mtribes/mtcli/releases/download/v0.7.0/mtribes_Linux_x86_64.tar.gz"
+      sha256 "c6fff9a12575082da4a8655e6f95c85fd5b03bb3921f7dffcf1fb44d39c4dfdf"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/mtribes/mtcli/releases/download/v0.6.0/mtribes_Linux_arm64.tar.gz"
-        sha256 "6a35713c743402c5c052008fa4af8bcfcd122c9df10b97c890206235107fce90"
+        url "https://github.com/mtribes/mtcli/releases/download/v0.7.0/mtribes_Linux_arm64.tar.gz"
+        sha256 "379181008a05f6d6a47d898c59dd5919506be1160ea4899ef7482f7499aee929"
       else
-        url "https://github.com/mtribes/mtcli/releases/download/v0.6.0/mtribes_Linux_armv6.tar.gz"
-        sha256 "ca50ed77bcfd8c31d7702c7d3dca822d15766c4148369a7b65111a4cfeebeec6"
+        url "https://github.com/mtribes/mtcli/releases/download/v0.7.0/mtribes_Linux_armv6.tar.gz"
+        sha256 "d7cd5c8b1579bbdbb4947b8915dbf7b9ef4981db6c211332f07c6c5bc97972d4"
       end
     end
   end
