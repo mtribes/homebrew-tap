@@ -5,24 +5,29 @@
 class Mtribes < Formula
   desc "A CLI to help automate app integration with mtribes."
   homepage "https://mtribes.com"
-  version "0.26.5"
+  version "0.27.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/mtribes/cli/releases/download/v0.26.5/mtribes_Darwin_x86_64.tar.gz"
-    sha256 "c015107244585adcc7d3086d5c9adb7b072520bc50e54ae6a1ea2d534bdf7e47"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/mtribes/cli/releases/download/v0.27.0/mtribes_Darwin_x86_64.tar.gz"
+      sha256 "93e63f343195a435fa5274dd8aeeacffa480fd54ae8a1e24314c3c5be8e25d97"
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/mtribes/cli/releases/download/v0.26.5/mtribes_Linux_x86_64.tar.gz"
-    sha256 "c22973a71b544489226b6d4f5479becd5e96e8911f30f8386ba0e9c3db1c376f"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/mtribes/cli/releases/download/v0.26.5/mtribes_Linux_armv6.tar.gz"
-    sha256 "b19739dfb63714c98bbb345c10838391bf1493900c21aec1b5d32d9f46387b39"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/mtribes/cli/releases/download/v0.26.5/mtribes_Linux_arm64.tar.gz"
-    sha256 "44ecfee2c40d666fe8e4973a78f1ca1c91829aa46e70b7f9c2c107f8075820aa"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/mtribes/cli/releases/download/v0.27.0/mtribes_Linux_x86_64.tar.gz"
+      sha256 "12ff991c90b77d5eb89832aa9ede378f5c538e8bd9b59a4545da58e3fba5574f"
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/mtribes/cli/releases/download/v0.27.0/mtribes_Linux_armv6.tar.gz"
+      sha256 "ebc949a6cc6e4e59fb62e0fc57177083cea81fdfed1a07b0ebc69da963520b98"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/mtribes/cli/releases/download/v0.27.0/mtribes_Linux_arm64.tar.gz"
+      sha256 "ef7729a758184ed5a0d7671b7345b561afe29ac03ce3823c56a8cc927fb2f187"
+    end
   end
 
   def install
