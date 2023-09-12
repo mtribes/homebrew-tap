@@ -5,20 +5,20 @@
 class Mtribes < Formula
   desc "A CLI to help automate app integration with mtribes."
   homepage "https://mtribes.com"
-  version "0.27.5"
+  version "0.27.7"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/mtribes/cli/releases/download/v0.27.5/mtribes_Darwin_x86_64.tar.gz"
-      sha256 "2d8145ad6ff8ca70f87a41a850eee90653977660001cdf63147c8ab36b8e88fb"
+    if Hardware::CPU.arm?
+      url "https://github.com/mtribes/cli/releases/download/v0.27.7/mtribes_Darwin_arm64.tar.gz"
+      sha256 "d2246ad20cc199fa6a6c316673144d367c4465b34baa7c34d0f02ab428274b4e"
 
       def install
         bin.install "mtribes"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/mtribes/cli/releases/download/v0.27.5/mtribes_Darwin_arm64.tar.gz"
-      sha256 "aabfeb78fb2af975f5bb84c76478a04c38ca3fa3687a927a58709d33034ccb95"
+    if Hardware::CPU.intel?
+      url "https://github.com/mtribes/cli/releases/download/v0.27.7/mtribes_Darwin_x86_64.tar.gz"
+      sha256 "6d64b6aaa39fcafcd186a4a7cc4998d1250450ddf0e39f34162fc456ba486e68"
 
       def install
         bin.install "mtribes"
@@ -27,25 +27,25 @@ class Mtribes < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/mtribes/cli/releases/download/v0.27.5/mtribes_Linux_armv6.tar.gz"
-      sha256 "9dd585bc1d332a32cb31aeb65e89ccccad7d87084ccc1a3f1b220c48c937773e"
+    if Hardware::CPU.intel?
+      url "https://github.com/mtribes/cli/releases/download/v0.27.7/mtribes_Linux_x86_64.tar.gz"
+      sha256 "21f1c1c650c61f7cd324584a048b9505a1b168452ac871c1ce1c72ac77f57699"
 
       def install
         bin.install "mtribes"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/mtribes/cli/releases/download/v0.27.5/mtribes_Linux_x86_64.tar.gz"
-      sha256 "1b5967dc06961776b252f8a411c7ef367f595ee9f3b1130d7e280a147b648799"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/mtribes/cli/releases/download/v0.27.7/mtribes_Linux_armv6.tar.gz"
+      sha256 "8734c4b4472f7e4af01b199c8c27e40dc298f18060d2e1fd2ba699377f81e517"
 
       def install
         bin.install "mtribes"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mtribes/cli/releases/download/v0.27.5/mtribes_Linux_arm64.tar.gz"
-      sha256 "dbcda5c549fd1e1c30b1e1685b7b0e3e2a4a09a45c28bcac6e27b39a4d604ccc"
+      url "https://github.com/mtribes/cli/releases/download/v0.27.7/mtribes_Linux_arm64.tar.gz"
+      sha256 "43c19afe13098d9c2587dbb04f53a1c4db4a6ba490a0889b95c9a46bc04804eb"
 
       def install
         bin.install "mtribes"
